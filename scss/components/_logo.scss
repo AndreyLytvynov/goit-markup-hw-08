@@ -1,0 +1,21 @@
+.logo {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+
+  color: $akcent;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  .header__logo & {
+    &__studio {
+      color: $black-text;
+    }
+  }
+
+  .footer__logo & {
+    &__studio {
+      color: $white-text;
+    }
+  }
+}
