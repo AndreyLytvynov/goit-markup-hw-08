@@ -106,8 +106,9 @@
 
 .header__media {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  //   justify-content: space-between;
+  //   flex-wrap: wrap;
+
   .media__item {
     display: flex;
     align-items: center;
@@ -117,7 +118,10 @@
     line-height: 22px;
     letter-spacing: 0.02em;
     color: $akcent;
-    &::after {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:not(:last-child)::after {
       display: inline-block;
       content: '';
       width: 1px;

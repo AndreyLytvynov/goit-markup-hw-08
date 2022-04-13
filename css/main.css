@@ -321,11 +321,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .header__media .media__item {
@@ -343,7 +338,11 @@ body {
   color: #2196f3;
 }
 
-.header__media .media__item::after {
+.header__media .media__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.header__media .media__item:not(:last-child)::after {
   display: inline-block;
   content: '';
   width: 1px;
