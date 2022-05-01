@@ -1,0 +1,48 @@
+.our-clients {
+  padding-bottom: 60px;
+  &__main-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+  }
+}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: -15px;
+  &__item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 15px;
+    width: calc((100% - 60px) / 2);
+    border: 1px solid #afb1b8;
+
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      width: calc((100% - 90px) / 3);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 180px) / 6);
+    }
+  }
+  &__link {
+    display: block;
+
+    // outline: 1px solid green;
+  }
+  &__icon {
+    fill: #afb1b8;
+    width: 106px;
+    height: 60px;
+    // outline: 1px solid green;
+  }
+}

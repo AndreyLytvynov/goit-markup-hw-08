@@ -18,37 +18,54 @@
 <body>
   <header class="header">
     <div class="header__container container">
-      <a href="" class="logo header__logo">Web<span class="logo__studio">Studio</span></a>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="./index.html">Студия</a>
+      <div class="header__box">
+        <a href="" class="logo header__logo">Web<span class="logo__studio">Studio</span></a>
+        <button class="header__button " type="button" data-menu-button>
+          <svg class="button__icon" width="40" height="40">
+            <use class="button__burger" href=".//images/symbol-defs.svg#icon-burger"></use>
+            <use class="button__cross" href=".//images/symbol-defs.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header__menu" data-menu>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link " href="./index.html">Студия</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="header__contacts contacts">
+          <li class="contacts__item">
+            <a href="mailto:info@devstudio.com" class="contacts__link">
+              <svg class="contacts__icon" width="16" height="12">
+                <use href="./images/symbol-defs.svg#icon-letter"></use>
+              </svg>
+              info@devstudio.com</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="">Портфолио</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="">Контакты</a>
+          <li class="contacts__item">
+            <a href="tel:+380961111111" class="contacts__link">
+              <svg class="contacts__icon" width="10" height="16">
+                <use href="./images/symbol-defs.svg#icon-phone"></use>
+              </svg>
+              +38 096 111 11 11</a>
           </li>
         </ul>
-      </nav>
 
-      <ul class="header-contact">
-        <li class="header-contact__item">
-          <a href="mailto:info@devstudio.com" class="header-contact__link">
-            <svg class="header-contact__icon" width="16" height="12">
-              <use href="./images/symbol-defs.svg#icon-letter"></use>
-            </svg>
-            info@devstudio.com</a>
-        </li>
-        <li class="header-contact__item">
-          <a href="tel:+380961111111" class="header-contact__link"><svg class="header-contact__icon" width="10"
-              height="16">
-              <use href="./images/symbol-defs.svg#icon-phone"></use>
-            </svg>
-            +38 096 111 11 11</a>
-        </li>
-      </ul>
+        <ul class="header__media media">
+          <li class="media__item"><a href="">Instagram</a></li>
+          <li class="media__item"><a href="">Twitter</a></li>
+          <li class="media__item"><a href="">Facebook</a></li>
+          <li class="media__item"><a href="">Linkedin</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
@@ -75,7 +92,19 @@
         <ul class="projects__list">
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img.jpg" alt="карточки на ноутбуке" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop.jpg 1x, ./images/totalPhotoPorfolio/img-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet.jpg 1x, ./images/totalPhotoPorfolio/img-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob.jpg 1x, ./images/totalPhotoPorfolio/img-mob@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop.jpg"
+                  alt="карточки на ноутбуке" />
+              </picture>
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -91,7 +120,19 @@
           </li>
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img-1.jpg" alt="баскетболисты" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop-1.jpg 1x, ./images/totalPhotoPorfolio/img-desktop-1@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet-1.jpg 1x, ./images/totalPhotoPorfolio/img-tablet-1@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob-1.jpg 1x, ./images/totalPhotoPorfolio/img-mob-1@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop-1.jpg" alt="баскетболисты" />
+              </picture>
+
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -109,7 +150,20 @@
           </li>
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img-2.jpg" alt="логотип с рыбой" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop-2.jpg 1x, ./images/totalPhotoPorfolio/img-desktop-2@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet-2.jpg 1x, ./images/totalPhotoPorfolio/img-tablet-2@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob-2.jpg 1x, ./images/totalPhotoPorfolio/img-mob-2@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop-2.jpg"
+                  alt="логотип с рыбой" />
+              </picture>
+
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -125,7 +179,19 @@
           </li>
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img-3.jpg" alt="наушники" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop-3.jpg 1x, ./images/totalPhotoPorfolio/img-desktop-3@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet-3.jpg 1x, ./images/totalPhotoPorfolio/img-tablet-3@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob-3.jpg 1x, ./images/totalPhotoPorfolio/img-mob-3@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop-3.jpg" alt="наушники" />
+              </picture>
+
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -141,7 +207,18 @@
           </li>
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img-4.jpg" alt="коробочки" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop-4.jpg 1x, ./images/totalPhotoPorfolio/img-desktop-4@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet-4.jpg 1x, ./images/totalPhotoPorfolio/img-tablet-4@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob-4.jpg 1x, ./images/totalPhotoPorfolio/img-mob-4@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop-4.jpg" alt="коробочки" />
+              </picture>
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -157,7 +234,19 @@
           </li>
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img-5.jpg" alt="монитор компьютера" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop-5.jpg 1x, ./images/totalPhotoPorfolio/img-desktop-5@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet-5.jpg 1x, ./images/totalPhotoPorfolio/img-tablet-5@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob-5.jpg 1x, ./images/totalPhotoPorfolio/img-mob-5@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop-5.jpg"
+                  alt="монитор компьютера" />
+              </picture>
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -173,7 +262,18 @@
           </li>
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img-6.jpg" alt="журнал" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop-6.jpg 1x, ./images/totalPhotoPorfolio/img-desktop-6@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet-6.jpg 1x, ./images/totalPhotoPorfolio/img-tablet-6@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob-6.jpg 1x, ./images/totalPhotoPorfolio/img-mob-6@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop-6.jpg" alt="журнал" />
+              </picture>
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -189,7 +289,18 @@
           </li>
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img-7.jpg" alt="кулон" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop-7.jpg 1x, ./images/totalPhotoPorfolio/img-desktop-7@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet-7.jpg 1x, ./images/totalPhotoPorfolio/img-tablet-7@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob-7.jpg 1x, ./images/totalPhotoPorfolio/img-mob-7@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop-7.jpg" alt="кулон" />
+              </picture>
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -205,7 +316,18 @@
           </li>
           <li class="projects__card">
             <div class="projects__box-image">
-              <img src="./images/img-8.jpg" alt="ноутбук" />
+              <picture>
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-desktop-8.jpg 1x, ./images/totalPhotoPorfolio/img-desktop-8@2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-tablet-8.jpg 1x, ./images/totalPhotoPorfolio/img-tablet-8@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/totalPhotoPorfolio/img-mob-8.jpg 1x, ./images/totalPhotoPorfolio/img-mob-8@2x.jpg 2x"
+                  media="(min-width: 480px)" />
+                <img class="projects__image" src="./images/totalPhotoPorfolio/img-desktop-8.jpg" alt="ноутбук" />
+              </picture>
               <div class="projects__hidden-box">
                 <p class="projects__hidden-text">
                   Ресурс предлагает комплексные предложения с разным уровнем
@@ -237,7 +359,7 @@
               <a class="address__link-mail" href="mailto:info@example.com">info@example.com</a>
             </li>
             <li class="address__item">
-              <a class="address__link-telephon" href="tel:+38 099 111 11 11">+38 099 111 11 11</a>
+              <a class="address__link-telephon" href="tel:+380991111111">+38 099 111 11 11</a>
             </li>
           </ul>
         </address>
@@ -280,7 +402,7 @@
       <form class="footer__subscription subscription">
         <h3 class="subscription__title">ПОДПИШИСЬ НА РАССЫЛКУ</h3>
         <label>
-          <input class="subscription__field" name="mail-footer" type="mail" placeholder="E-mail" />
+          <input class="subscription__field" name="mail-footer" type="email" placeholder="E-mail" />
         </label>
         <button class="footer__button subscription__button button" type="button">
           <span class="button__text">Подписаться</span>
@@ -288,6 +410,7 @@
       </form>
     </div>
   </footer>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

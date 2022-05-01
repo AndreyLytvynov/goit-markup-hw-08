@@ -1,0 +1,70 @@
+.hero__container {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero-mob.jpg);
+    background-size: cover;
+    padding: 118px 0;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero__container {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../../images/hero-mob@x2.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero__container {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../../images/hero-tablet.jpg);
+        background-size: cover;
+        padding: 118px 0;
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .hero__container {
+            background-image: linear-gradient(
+                    to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url(../../images/hero-tablet@2x.jpg);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero__container {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../../images/hero-desk.jpg);
+        background-size: cover;
+        padding: 118px 0;
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .hero__container {
+            background-image: linear-gradient(
+                    to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url(../../images/hero-desk@2x.jpg);
+        }
+    }
+}
+
+.hero__title {
+    padding-bottom: 30px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero__container {
+        padding: 200px 0;
+    }
+}

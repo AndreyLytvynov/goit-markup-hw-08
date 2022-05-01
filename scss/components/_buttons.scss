@@ -19,6 +19,30 @@
   cursor: pointer;
 }
 
+// Кнопки хедера
+.header__button {
+  margin: 0;
+  padding: 0;
+  background-color: initial;
+  border: none;
+  z-index: 20;
+  .button__cross {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header__button--is-open {
+  .button__burger {
+    display: none;
+  }
+  .button__cross {
+    display: block;
+  }
+}
+
 // Кнопка блока "Герой"
 .hero__button {
   padding: 10px 32px;
@@ -69,8 +93,8 @@
 // Кнопки модального окна
 .modal__close-button {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0px;
+  right: 0px;
   width: 30px;
   height: 30px;
   margin: 0;
